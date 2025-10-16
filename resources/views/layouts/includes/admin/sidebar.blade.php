@@ -12,35 +12,29 @@
             'header' => 'Administrar página',
         ],
         [
-            'name' => 'Gestión',
-            'icon' => 'fa-solid fa-folder-tree',
+            'name' => 'Dashboard',
+            'icon' => 'fa-solid fa-gauge',
+            'href' => route('admin.dashboard'),
+            'active' => false,
             'submenu' => [
                 [
-                    'name' => 'Dashboard 2',
+                    'name' => 'tapir',
                     'href' => '#',
-                    'active' => true,
+                    'active' => false,
                 ],
-           
-            ],
-        ],
-          [
-            'name' => 'Tapir',
-            'icon' => 'fa-solid fa-file-invoice-dollar',
-            'href' => '#',
-            'active' => false,
-        ],
-        [
-            'name' => 'Billing',
-            'icon' => 'fa-solid fa-file-invoice-dollar',
-            'href' => '#',
-            'active' => false,
-        ],
-        [
-            'name' => 'Invoice',
-            'icon' => 'fa-solid fa-file-lines',
-            'href' => '#',
-            'active' => false,
-        ],
+                           [
+                    'name' => 'Billing',
+                    'href' => '#',
+                    'active' => false,
+                ],
+                                [
+                    'name' => 'Invoice',
+                    'href' => '#',
+                    'active' => false,
+                ],
+],
+],
+      
     ];
 @endphp
 
