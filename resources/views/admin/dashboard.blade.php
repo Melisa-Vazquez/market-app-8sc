@@ -1,20 +1,16 @@
-<x-app-layout>
-<x-app-layout :breadcrumbs="[
+<x-admin-layout :breadcrumbs="[
     [
-        'name' => 'ITMérida',
+        'name' => 'Dashboard',
         'href' => route('admin.dashboard'),
     ],
     [
-        'name' => 'DSC',
+        'name' => 'Profile',
         'href' => route('admin.dashboard'),
     ],
     [
-        'name' => 'HB',
+        'name' => 'Melisa',
     ],
 ]">
-<x-slot name="header">
 
-
-
-
-</x-app-layout>
+hola
+</x-admin-layout>
