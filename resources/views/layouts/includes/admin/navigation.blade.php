@@ -9,7 +9,7 @@
             </svg>
          </button>
         <a href="/" class="flex ms-2 md:me-24">
-          <img src="images/ie.jpg" class="h-8 me-3" alt="FlowBite Logo" />
+          <img src="{{asset("images/ie.jpg"  )}}"class="h-8 me-3" alt="FlowBite Logo />
           <span class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white">FELIX</span>
         </a>
       </div>
@@ -19,6 +19,7 @@
                     <x-dropdown align="right" width="48">
                         <x-slot name="trigger">
                             @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
+                            
                                 <button class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition">
                                     <img class="size-8 rounded-full object-cover" src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" />
                                 </button>

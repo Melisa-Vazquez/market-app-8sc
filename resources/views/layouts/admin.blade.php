@@ -1,6 +1,8 @@
-<!-- toma los parametros del dashboard-->
-@props(['breadcrumbs' =>[]])
-
+@props ([
+    'title'=> config('app.name', 'Laravel'),
+    'breadcrumbs'=>[],
+    ])
+    
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -17,36 +19,37 @@
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-        <script src="https://kit.fontawesome.com/bdd1224d87.js" crossorigin="anonymous"></script>
-       <wireui:scripts/>
-       
-       
+        <script src="https://kit.fontawesome.com/c23eec2327.js" crossorigin="anonymous"></script>
+
+        <wireui:scripts />
+
         <!-- Styles -->
         @livewireStyles
     </head>
-    <body class="font-sans antialiased bg-gray-50">
+    <body class="font-sans antialiased bg-gray-200">
+        @include('layouts.includes.admin.navigation')
 
-@include('layouts.includes.admin.navigation')
-@include('layouts.includes.admin.sidebar')
+        @include('layouts.includes.admin.sidebar')
 
-
-<div class="p-4 sm:ml-64">
-         <!-- AÑADIR MARGEN SUPERIOR-->
-         <div class="mt-14 flex items-center justify-between w-full">
-            @include('layouts.includes.admin.breadcrumb')
-         </div>
-
-
-         <div class="mt-14">
-         
-   {{$slot}}
-
-         </div>
-         
+        <div class="p-4 sm:ml-64">
+        <!-- añadir marger superior-->
+            <div class="mt-14 flex items-center justify-betweens w-full">
+                @include('layouts.includes.admin.breadcrumb', ['breadcrumbs' => $breadcrumbs])
 </div>
+        {{ $slot }}     
+            
+        </div>
 
         @stack('modals')
 
         @livewireScripts
+
+        <body>
+    @yield('content')
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+</body>
+
+
     </body>
 </html>
