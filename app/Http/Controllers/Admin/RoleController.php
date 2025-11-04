@@ -20,8 +20,11 @@ class RoleController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.roles.create');
     }
+        /**
+     * edit
+     */
 
     /**
      * Store a newly created resource in storage.
@@ -43,8 +46,9 @@ class RoleController extends Controller
      * Show the form for editing the specified resource.
      */
     public function edit(string $id)
+    
     {
-        //
+        return view('admin.roles.edit');
     }
 
     /**
