@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use Spatie\Permission\Models\Role; // 👈 ESTA LÍNEA ES LA CLAVE
+use Spatie\Permission\Models\Role;
 
 class RoleSeeder extends Seeder
 {
@@ -14,7 +14,7 @@ class RoleSeeder extends Seeder
     {
         // Definir roles
         $roles = [
-            'paciente',
+            'Paciente',
             'Doctor',
             'Recepcionista',
             'Administrador',
