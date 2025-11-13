@@ -17,6 +17,13 @@
     'href' => route('admin.roles.index'),
     'active' => request()->routeIs('admin.roles.*'),
 ], 
+//AQUI CREE MI BOTON DE USUARIOS
+[
+    'name' => 'Usuarios',
+    'icon' => 'fas fa-users',
+    'href' => route('admin.usuarios.index'),
+    'active' => request()->routeIs('admin.usuarios.*')
+],
     ];
 @endphp
 
